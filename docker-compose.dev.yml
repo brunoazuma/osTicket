@@ -15,6 +15,26 @@ services:
     networks:
       - osticket
 
+  # osticket:
+  #   container_name: osticket
+  #   build:
+  #     context: ./osticket
+  #     dockerfile: ./official.Dockerfile
+  #   environment:
+  #     - MYSQL_HOST
+  #     - MYSQL_USER
+  #     - MYSQL_PASSWORD
+  #     - MYSQL_DATABASE
+  #     - INSTALL_NAME
+  #     - ADMIN_USERNAME
+  #     - ADMIN_PASSWORD
+  #   ports:
+  #     - 8080:80
+  #   networks:
+  #     - osticket
+  #   depends_on:
+  #     - maria
+
   osticket:
     container_name: osticket
     build: ./osticket
