@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  maria:
-    container_name: ${MYSQL_HOST}
+  mariadb:
+    container_name: ${MARIADB_HOST}
     image: mariadb:11.1-jammy
     environment:
       - MARIADB_ROOT_PASSWORD
@@ -43,7 +43,7 @@ services:
     networks:
       - osticket
     depends_on:
-      - maria
+      - mariadb
 
 networks:
   osticket:
