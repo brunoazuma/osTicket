@@ -50,4 +50,8 @@ EXPOSE 80
 
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
-RUN echo "error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE" >> /usr/local/etc/php/php.ini
+RUN echo "display_errors = off" >> /usr/local/etc/php/php.ini
+
+RUN echo "log_errors = on" >> /usr/local/etc/php/php.ini
+
+RUN echo "erro_log = /dev/stderr" >> /usr/local/etc/php/php.ini
